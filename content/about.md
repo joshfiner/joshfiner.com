@@ -8,3 +8,5 @@ I am a blogger an I love Hugo.
 ## More about me
 
 Some other stuff.
+
+![hugo logo](/img/hugo-logo.png)
