@@ -1,9 +1,14 @@
 language: go
 install:
-  - go get -v github.com/spf13/hugo
+- go get -v github.com/spf13/hugo
+- pip install --user awscli
 script:
-  - hugo version
-  - make build
+- hugo version
+- make deploy
 branches:
   only:
-    - master
+  - master
+env:
+  global:
+  - secure: HxLIOfVmdBIhRjrftM7Ft3mg18gOct8LJX0pDouZOm46OSzgsWJuioR1c3gFvwAPujlwOyf1h/jhw4Qjxa4+mGyx7+0SWYqrQj/xvPSTDNdnqaDgJeDcLohbgRVAxl80FjTAPZ675/5xk6SPYI7Bs6W+Nsu4fvqxT+DGREh/tezcTHtfyIF9EYwPN1bOuoH4bFB2FdGzaaKr/LhRkPzdkQuY4PW+C0g2uykE+teVrHVkwkAyELnpM4wmd98DhdNdNBdisrXiMqU3ld0s0cncbUXHiQdzTE9/8ndPISEAZ0idDDAKhSvpn05PRkkr49ZtasRSVFi1arHo25igl7Vg+mhoNbo0q3kfU1w/M1tqVFsSM0IblpTxeWStjFs9oWOKTo2cMtb+gjFQtw/BQGAsuwC7fo001RuOMfEZ+9Ds+Ug6Msao7Ct1Dzot8kJUa2lxLWxxaSFISnpqR4OGxXkB8POiAviHY1X0lpISAOu8dZW4z+AeejHLAETd7ocnbSfYgw0w6TYb4iHq3k/abC6gdEpFskSvqHJYKgQf8l32hdlCMOgKwtmB9on+KyAJXG/LIO/3S1WkkDwSsMeFyksq4sABM1hSdPiWDhyjt3ujZ6rQWV4jWiLd0e2gsRnUQhxWes18uUIRUAjAtgrMYyIyqHc5Fc8StwqsQsvTu80yTh0=
+  - secure: mW/JuHgpHUzFtvuChuV20kG7PCGsLmQp9/jPQfLRxy57+Itdp78ZMaj+yXiyCTIV+uVP4MF4Rsf3ndbJmLRgByC2nM3VKj9TUkUDelcpo0QXI4/6/Sq2K49Tp0ymiKMY9Nx80dC7iTR73kDUILqfWdY34SJzNyryh5FTea6m9WP8kALxkSA8L0Z6sQ0birCSbI+r6RNsVW5BadihxNC0oZwmfcel969AadmEKqpEaG636GxsQ6gwStcVLQaeeoDbJkKfClVPO43ep0IMYAQSMgSxZImfy5owUppTRPTncrvHczpFB/73dDHtP/2gNWskgACy+0ShFzte0+JKpGqynTjxB0QCaaGRpj27rLFUtUWyidENbpeUlTVtSCYWWyOZQiDx4MDs6b2tghLynbSkXwX8/fe64QWAYrN7HLhqUF5m7K1k+RahjqlPFoL9ffYMeF1iuTNn79gNfMTD5N4oKOqE8rkYJkEBIpJz4K1nKmhfWSgqOfP/d7MOf5EGjNd5kyXsmD/P82TRDUtuSyXU1maqHvkcIjH1KsZygKxK1I1chP9l6VIFEPVDGJkf9C3MzcI5AEU9BZlmFTQgwL0tGO6KKlkqMyoKxuzYIPrOt4zR35j8J4v8tGiAlgJw7WXDsfGlRudrBUgmJf1eN7nj+JHzA8qZT0GRy24p/zwJyQI=
